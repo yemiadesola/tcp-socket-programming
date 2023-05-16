@@ -12,6 +12,7 @@ Document Name: tcpserver
 Compile instruction: gcc -o server tcpserver.c
 Run: ./server 9999
 Note: You can use any port of your choice. In my project I use 9999 as port number
+Also, the file that will be downloaded should be created into the VM with the server program
 
 
 Client Side
