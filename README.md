@@ -1,8 +1,11 @@
-# tcp-socket-programming
-This program is written in C Language
-This program is able to run on two virtual machines. 
-In this project, I use kali Linux and Ubuntu as server and client respectfully.
+# TCP SOCKET PROGRAMMING
+
+Introduction
+TCP socket programming is a fundamental concept in network communication. It allows applications to establish a reliable connection and exchange data between a client and a server over a network. This repository aims to provide simple examples of TCP socket programming. This program is able to run on two virtual machines. In this project, I use kali Linux and Ubuntu as server and client respectfully.
 Ensure to configure the network adapter of both virtual machines to be on the same network
+
+Programming Language
+The repository currently includes examples in C programming languages
 
 Below is the compilation and run instruction
 Document Name: tcpserver
