@@ -14,7 +14,7 @@ Note: You can use any port of your choice. In my project I use 9999 as port numb
 Client Side
 Document name: tcpclient.c
 compilation instruction: gcc -o client tcpclient.c
-Run ./client [Server IP address] [server port] [file directory]. See example below
-Run: ./client 192.168.58.100 9999 /file.txt
+Run program:  ./client [Server IP address] [server port] [file directory]. See example below
+Run program: ./client 192.168.58.100 9999 /file.txt
 
 
