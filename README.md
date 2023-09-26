@@ -1,24 +1,39 @@
-# TCP SOCKET PROGRAMMING
+This is a simple TCP client and server program in C language.
 
-Introduction
-TCP socket programming is a fundamental concept in network communication. It allows applications to establish a reliable connection and exchange data between a client and a server over a network. This repository aims to provide simple examples of TCP socket programming. This program is able to run on two virtual machines. In this project, I use kali Linux and Ubuntu as server and client respectfully.
-Ensure to configure the network adapter of both virtual machines to be on the same network
+The client program can be used to download a file from a server. It sends a GET request to the server and receives the file contents in response. The server program can be used to serve files to clients. It listens for incoming connections and sends the requested file to the client.
 
-Programming Language
-The repository currently includes examples in C programming languages
+To use the client program, compile it with the following command:
 
-Below is the compilation and run instruction
-Document Name: tcpserver
-Compile instruction: gcc -o server tcpserver.c
-Run: ./server 9999
-Note: You can use any port of your choice. In my project I use 9999 as port number
-Also, the file that will be downloaded should be created into the VM with the server program
+gcc TCPClient.c -o TCPClient
 
+Then, run the client program with the following command:
 
-Client Side
-Document name: tcpclient.c
-compilation instruction: gcc -o client tcpclient.c
-Run program:  ./client [Server IP address] [server port] [file directory]. See example below
-Run program: ./client 192.168.58.100 9999 /file.txt
+./TCPClient <server_ip> <port> <file_path>
 
+where:
 
+    <server_ip> is the IP address of the server
+    <port> is the port number of the server
+    <file_path> is the path to the file on the server
+
+To use the server program, compile it with the following command:
+
+gcc TCPServer.c -o TCPServer
+
+Then, run the server program with the following command:
+
+./TCPServer <port>
+
+where <port> is the port number on which the server will listen for incoming connections.
+
+Once the server program is running, you can use the client program to download files from the server.
+
+For example, to download the file index.html from the server at 127.0.0.1:8080, you would run the following command:
+
+./TCPClient 127.0.0.1 8080 index.html
+
+The client program will download the file to the current directory.
+
+If the file does not exist on the server, the client program will print an error message and exit.
+
+This program is a good example of how to use TCP sockets to send and receive data between two applications. It can be used as a starting point for developing more complex TCP applications, such as file transfer, chat, or gaming.
